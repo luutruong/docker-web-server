@@ -29,3 +29,5 @@ services:
       - mysql
     links:
       - mysql
+    volumes:
+      - ./.config/php/php.ini:/usr/local/etc/php
