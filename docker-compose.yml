@@ -19,16 +19,17 @@ services:
       - ./.config/nginx/conf.d:/etc/nginx/conf.d
       - ./.data/nginx:/var/log/nginx
       - ./html:/var/www/html
-
+    links:
+      - php
   php:
     build:
       context: ./
       dockerfile: php.dockerfile
     depends_on:
-      - nginx
       - mysql
     links:
       - mysql
     volumes:
       - ./.config/php/php.ini:/usr/local/etc/php/php.ini
       - ./.config/php/config.d:/usr/local/etc/php/config.d
+      - ./html:/var/www/html
