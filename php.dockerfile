@@ -24,7 +24,7 @@ apt-get install -y \
         --with-freetype-dir=/usr/include/ \
         --with-png-dir=/usr/include/ \
         --with-jpeg-dir=/usr/include/ \
-	&& docker-php-ext-install gd
+	&& docker-php-ext-install gd \
 ;fi
 
 WORKDIR "/var/www/html"
