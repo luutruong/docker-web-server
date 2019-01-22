@@ -13,7 +13,6 @@ RUN docker-php-ext-install mysqli \
 	&& docker-php-ext-install zip
 
 RUN if [ ${PHP_GD} = true ]; then \
-
 apt-get install -y \ 
     libfreetype6-dev \ 
     libjpeg62-turbo-dev \

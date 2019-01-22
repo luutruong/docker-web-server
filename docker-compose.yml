@@ -35,7 +35,6 @@ services:
     links:
       - mysql
     volumes:
-      - ./.config/php/php.ini:/usr/local/etc/php/php.ini
       - ./.config/php/config.d:/usr/local/etc/php/config.d
       - ./.data/composer:/root/.composer
 
